@@ -84,11 +84,12 @@ fn mkdir(path: &Path) {
 }
 
 fn authors_typst(authors: &[(String, String)]) -> String {
+    // Trailing comma is required so a single author stays an array, not a dict.
     authors
         .iter()
-        .map(|(name, id)| format!("    (name: \"{name}\", email: \"\", id: \"{id}\")"))
+        .map(|(name, id)| format!("    (name: \"{name}\", email: \"\", id: \"{id}\"),"))
         .collect::<Vec<_>>()
-        .join(",\n")
+        .join("\n")
 }
 
 fn hw_content(title: &str, number: u32, authors: &[(String, String)]) -> String {
