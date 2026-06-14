@@ -7,7 +7,7 @@
   body,
 ) = {
   set document(author: authors.map(a => a.name), title: title)
-  set text(font: "Noto Sans Hebrew", lang: "he")
+  set text(font: "David", lang: "he")
   show math.equation: set text(weight: 400)
   set heading(numbering: none)
 
