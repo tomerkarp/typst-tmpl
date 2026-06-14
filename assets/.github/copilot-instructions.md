@@ -2,6 +2,21 @@
 
 This project contains Hebrew-language academic homework documents written in Typst.
 
+## Suggestion scope (important)
+
+Keep inline suggestions SHORT and local. The author is writing math and prose by
+hand and only wants help with the next small piece — not whole solutions.
+
+- Complete at most the **current line or the current math expression**. Stop at the
+  closing `$`, the end of the line, or the next blank line.
+- Do **not** generate an entire `*א.*` / `*ב.*` sub-answer, a full derivation, or a
+  whole `== שאלה N` block from a heading or a one-line prompt.
+- Do **not** invent the rest of a problem, its given values, or its final result.
+  The author supplies the problem; you only help type what they've started.
+- Prefer finishing a half-typed expression (e.g. completing `sum_(n=` → `sum_(n=0)^(N-1)`)
+  or the rest of a known identity over proposing new steps.
+- When unsure, suggest less. One correct line beats a long speculative block.
+
 ## Document structure
 
 Every document imports and uses the shared `template.typ`:
@@ -64,6 +79,4 @@ $ E_"max" =^((#footnote()[הסבר קצר])) (2 V_(B I))/d $
 ## File layout
 
 - `template.typ` — shared project template (do not modify structure)
-- `*.typ` — individual homework files, one per assignment
-- `DspExample.typ` — Digital Signal Processing homework example
-- `example.typ` — Semiconductors homework example
+- `HW*.typ` — individual homework files, one per assignment
